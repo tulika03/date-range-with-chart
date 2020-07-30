@@ -90,18 +90,7 @@ getDate() {
     let endDateVal = new Date(this.endDate).setDate(this.endDate.getDate() + 1);;
   console.log("got date range as of now", this.startDate, this.endDate);
 let new_dataset: any = this.recievedDataSet.filter(x => ((new Date(x['date']).getTime()) >= (this.startDate.getTime())) && ((new Date(x['date']).getTime()) <= (this.endDate.getTime())));
-//  console.log(filteredDataSet)
-//let new_dataset: [] = [];
-// for(let i=0; i< this.recievedDataSet.length; i++) {
-//  // console.log(new Date(this.recievedDataSet[i]['date']).getUTCDate())
-//   if(((new Date(this.recievedDataSet[i]['date']).getTime()) >= (this.startDate.getTime())) && ((new Date(this.recievedDataSet[i]['date']).getTime()) <= (this.endDate.getTime()))) {
-//     console.log("in range",  new Date(this.recievedDataSet[i]['date']))
-//     new_dataset.push(this.recievedDataSet[i])
-//   }
-//   else {
-//     console.log("nope")
-//   }
-// }
+
 console.log("new Dataset", new_dataset)
 this.ageDataset = [];
 this.ageDataset = new_dataset;
